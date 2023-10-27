@@ -67,7 +67,7 @@ header a{
     font-size: 20px;
 }
 
-header a:hover{
+header nav.menu-desktop a:hover{
     color: #fff;
     transform: scale(1.1);
 }
@@ -76,7 +76,7 @@ header nav ul{
     list-style-type: none;
 }
 
-header nav ul li{
+header nav.menu-desktop ul li{
     display: inline-block;
     padding: 0 40px;
 }
@@ -84,6 +84,61 @@ header nav ul li{
 header .interface .logo img{
     width: 150px;
 }
+
+/*ESTILO DO MENU MOBILE*/
+.btn-abrir-menu i{
+    color: #00FF43;
+    font-size: 50px;
+}
+.menu-mobile{
+    background-color: #2e2e2e;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+.menu-mobile .btn-fechar{
+    padding: 20px 5%;
+}
+.menu-mobile .btn-fechar i{
+    color: #00FF43;
+    font-size: 30px;
+}
+.menu-mobile nav ul{
+    text-align: right;
+}
+.menu-mobile nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+.menu-mobile nav ul li a:hover{
+    background-color: #00FF43;
+    color: #000;
+}
+.overlay-menu{
+    background-color: #000000a6;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8888;
+    display: none;
+}
+/*FIM ESTILO DO MENU MOBILE*/
 
 section .topo-do-site{
     padding: 40px 4%;
@@ -115,9 +170,8 @@ section.topo-do-site .flex{
     position: relative;
     animation: flutuar 2s ease-in-out infinite alternate;
     width: 350px;
-    border-radius: 0px 200% 200% 200%;
-    transform: scaleX(-1);
-    box-shadow: #00FF43 0px 0px 0px 0px, #00FF43 0px 0px 20px 1px;
+    border-radius: 200% 200% 200% 200%;
+    box-shadow: #00FF43 0px 0px 0px 0px, #00FF43 0px 0px 30px 1px;
 }
 
 @keyframes flutuar{
@@ -128,6 +182,7 @@ section.topo-do-site .flex{
         top: 30px;
     }
 }
+/*HABILIDADES*/
 
 section.habilidades{
     padding: 80px 4%;
@@ -167,6 +222,8 @@ section.habilidades .flex{
     text-align: justify;
 }
 
+/*SOBRE*/
+
 section.sobre-mim{
     padding: 40px 4%;
 }
@@ -196,6 +253,30 @@ section.sobre-mim .flex{
     text-align: justify;
 }
 
+.curriculo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-download button{
+    padding: 10px 40px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #00FF43;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 10px;
+}
+
+.btn-social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .btn-social button{
     width: 60px;
     height: 60px;
@@ -207,6 +288,8 @@ section.sobre-mim .flex{
     margin: 0px 10px;
     transition: 0.2s;
 }
+
+
 
 /* ESTILO PORTIFÓLIO */
 
@@ -391,3 +474,82 @@ footer .line-footer p a{
     margin-top: 60px;
 }
 /* FIM ESTILO OBRIGADO */
+
+@media screen and (max-width: 1151px){
+    /*CLASSES GERAIS*/
+    .flex{
+        flex-direction: column-reverse;
+    }
+    h1, h2, p{
+        text-align: center;
+    }
+    /*CABEÇALHO*/
+    .menu-desktop, .botao-contato{
+        display: none;
+    }
+
+    .topo-do-site .img-topo-site img{
+        border-radius: 200% 200% 200% 200%;
+    }
+    /*TOPO DO SITE*/
+    section.topo-do-site .flex{
+        gap: 50px;
+    }
+    section .topo-do-site{
+        padding: 20px 8%;
+    }
+    .img-topo-site{
+        display: flex;
+        justify-content: center;
+    }
+    .topo-do-site .txt-topo-site h1{
+        font-size: 29px;
+    }
+    .topo-do-site .img-topo-site img{
+        width: 40%;
+    }
+    /*HABILIDADES*/
+    section.habilidades{
+        padding: 80px 8%;
+        box-shadow: 0px 0px 40px 20px #ffffff5e;
+    }
+    /*SOBRE*/
+    .sobre-mim .flex{
+        display: flex;
+        flex-direction: column;
+    }
+    section.sobre-mim{
+    padding: 40px 8%;
+    }
+    .sobre-mim .txt-sobre-mim h2{
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .curriculo{
+        flex-direction: column;
+    }
+    .btn-social{
+        text-align: center;
+    }
+    /*PROJETOS*/
+    .projetos .flex{
+        flex-direction: column;
+    }
+    .img-port{
+        width: 100%;
+        height: 200px;
+        background-color: #00FF43;
+        background-size: cover;
+        background-position: 0% 0%;
+        transition: 1s;
+        cursor: pointer;
+        border-radius: 40px;
+        border: 2px solid #00FF43;
+        position: relative;
+    
+    }
+    /*RODAPÉ*/
+    footer .flex{
+        flex-direction: column;
+    }
+}
