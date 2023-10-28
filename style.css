@@ -513,7 +513,7 @@ footer .line-footer p a{
     }
     .btn-abrir-menu{
         position: fixed;
-        /* margin-left: 80%; */
+        margin-left: 70%;
         z-index: 999999;
     }
 
