@@ -115,13 +115,12 @@ header .interface .logo img{
     top: 0;
     right: 0;
     z-index: 99999;
-    width: 100%;
+    width: 0%;
     overflow: hidden;
     transition: 0.5s;
 }
 .menu-mobile.abrir-menu{
     width: 70%;
-    padding-right: 10%;
 }
 .menu-mobile.abrir-menu ~ .overlay-menu{
     display: block;
@@ -513,7 +512,7 @@ footer .line-footer p a{
     }
     .btn-abrir-menu{
         position: fixed;
-        margin-left: 70%;
+        margin-left: 80%;
         z-index: 999999;
     }
 
