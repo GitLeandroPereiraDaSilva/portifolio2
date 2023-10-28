@@ -82,6 +82,7 @@ header a{
     font-size: 20px;
 }
 
+
 header nav.menu-desktop a:hover{
     color: #fff;
     transform: scale(1.1);
@@ -139,7 +140,7 @@ header .interface .logo img{
     color: #fff;
     font-size: 20px;
     font-weight: 300;
-    padding: 20px 8%;
+    padding: 20px 16%;
     display: block;
 }
 .menu-mobile nav ul li a:hover{
