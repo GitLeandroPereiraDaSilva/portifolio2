@@ -554,9 +554,10 @@ footer .line-footer p a{
     section.sobre-mim{
     padding: 40px 8%;
     }
-    .sobre-mim .txt-sobre-mim h2{
+    .sobre-mim .txt-sobre-mim h2 span{
         font-size: 30px;
         line-height: 30px;
+        margin: 0 auto;
     }
     .curriculo{
         flex-direction: column;
