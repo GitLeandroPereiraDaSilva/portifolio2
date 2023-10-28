@@ -6,6 +6,10 @@
     
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: #000;
 }
@@ -19,6 +23,12 @@ body{
     display: flex;
 }
 
+section{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .botao-contato button{
     padding: 10px 40px;
     font-size: 20px;
@@ -48,8 +58,13 @@ button:hover, form .btn-enviar input:hover{
 /* ESTILO CABEÇALHO */
 
 header{
-    padding: 40px 4%;
+    padding: 10px 4%;
+    position: fixed;
+    width: 100%;
+    z-index: 9999999999;
 }
+
+
 
 header > .interface{
     display: flex;
@@ -72,6 +87,8 @@ header nav.menu-desktop a:hover{
     transform: scale(1.1);
 }
 
+
+
 header nav ul{
     list-style-type: none;
 }
@@ -82,13 +99,14 @@ header nav.menu-desktop ul li{
 }
 
 header .interface .logo img{
-    width: 150px;
+    width: 100px;
 }
 
 /*ESTILO DO MENU MOBILE*/
 .btn-abrir-menu i{
     color: #00FF43;
     font-size: 50px;
+    display: none;
 }
 .menu-mobile{
     background-color: #2e2e2e;
@@ -141,7 +159,7 @@ header .interface .logo img{
 /*FIM ESTILO DO MENU MOBILE*/
 
 section .topo-do-site{
-    padding: 40px 4%;
+    padding: 10px 4%;
 }
 
 section.topo-do-site .flex{
@@ -484,8 +502,22 @@ footer .line-footer p a{
         text-align: center;
     }
     /*CABEÇALHO*/
+    header{
+        padding: 10px 4%;
+        position: relative;
+        width: 100%;
+    }
     .menu-desktop, .botao-contato{
         display: none;
+    }
+    .btn-abrir-menu{
+        position: fixed;
+        margin-left: 80%;
+        z-index: 999999;
+    }
+
+    .btn-abrir-menu i{
+        display: block;
     }
 
     .topo-do-site .img-topo-site img{
