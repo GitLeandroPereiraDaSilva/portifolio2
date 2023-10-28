@@ -133,7 +133,7 @@ header .interface .logo img{
     font-size: 30px;
 }
 .menu-mobile nav ul{
-    text-align: right;
+    text-align: left;
 }
 .menu-mobile nav ul li a{
     color: #fff;
@@ -259,6 +259,7 @@ section.sobre-mim .flex{
     font-size: 40px;
     line-height: 40px;
     margin-bottom: 30px;
+    margin: 20px 20%;
 }
 
 .sobre-mim .txt-sobre-mim h2 span{
@@ -267,7 +268,7 @@ section.sobre-mim .flex{
 }
 
 .sobre-mim .txt-sobre-mim p{
-    margin: 20px 0px;
+    margin: 20px 20%;
     text-align: justify;
 }
 
